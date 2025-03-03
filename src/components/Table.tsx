@@ -37,7 +37,7 @@ export default function Table<T extends { id: number }>({
       setSelectedRows(data.map((row) => row.id));
     }
   };
-  
+
   const deleteSelected = () => {
     onDelete(selectedRows);
     setSelectedRows([]);
@@ -76,7 +76,8 @@ export default function Table<T extends { id: number }>({
       <table className="w-full border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
-            <th>Select
+            <th>
+              Select
               <input
                 type="checkbox"
                 checked={selectedRows.length === data.length && data.length > 0}
